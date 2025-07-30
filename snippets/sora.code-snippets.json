@@ -1,0 +1,90 @@
+{
+    "Show to Console": {
+      "prefix": "show",
+      "body": ["show('${1:message}')"],
+      "description": "Print a message to the console."
+    },
+    "Print to Console": {
+      "prefix": "print",
+      "body": ["print('${1:message}')"],
+      "description": "Print a message to the console."
+    },
+    "Close": {
+      "prefix": "close",
+      "body": ["close()"],
+      "description": "A close statement ends your code block"
+    },
+    "Error": {
+      "prefix": "error",
+      "body": ["error()"],
+      "description": "This statement shows an error on home UI, if there is any."
+    },
+    "Debug your code": {
+      "prefix": "print -r",
+      "body": ["print -r('${1:message}')"],
+      "description": "Print a message to the debug console. This helps in debugging your codes."
+    },
+    "If Statement": {
+      "prefix": "if",
+      "body": ["if '${1:condition}'"],
+      "description": "Insert an if statement. This writes a condition without an output."
+    },
+    "If-else Statement": {
+      "prefix": "elseif",
+      "body": [
+        "if ${1:condition} {",
+        "  ${2:# Code block for true condition}",
+        "} else {",
+        "  ${3:# Code block for false condition}",
+        "}"
+      ],
+      "description": "Insert an else statement using plain English syntax."
+    },
+    "Variable Declaration 1": {
+      "prefix": "let",
+      "body": ["let ${1:variableName} be (${2:value})"],
+      "description": "Declare a variable in Sora."
+    },
+    "Variable Declaration 2": {
+      "prefix": "var",
+      "body": ["let ${1:variableName} be (${2:value})"],
+      "description": "Declare a variable in Sora."
+    },
+    "Fetch API": {
+      "prefix": "fetch",
+      "body": [
+        "fetch:",
+        "  url: '${1:url}',",
+        "  method: '${2:GET}',",
+        "  headers: {",
+        "    'Authorization': '${3:token}',",
+        "    'Content_type': 'application/json'",
+        "  },",
+        "  body: {",
+        "    '${4:data}'",
+        "  }",
+        "response:",
+        "  show(response.data)"
+      ],
+      "description": "Create a fetch API request using Sora's English-like syntax."
+    },
+    "Navigate to Page": {
+      "prefix": "navigate",
+      "body": ["navigate to ('${1:PageName}')"],
+      "description": "Navigate to another screen"
+    },
+    "Set Value": {
+      "prefix": "set",
+      "body": ["set ${1:variable} to ${2:value}"],
+      "description": "Assign a value to a variable"
+    },
+    "Button Tap": {
+      "prefix": "on tap",
+      "body": [
+        "when ${1:button} is tapped {",
+        "  ${2:-r('Button pressed!')}",
+        "}"
+      ],
+      "description": "Define what happens when a button is tapped"
+    }
+  }
