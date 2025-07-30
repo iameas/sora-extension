@@ -54,6 +54,14 @@
                 }
             }
         ],
+        "configuration": {
+            "title": "Sora",
+            "properties": {
+                "[sora]": {
+                    "editor.formatOnSave": true
+                }
+            }
+        },
         "grammars": [
             {
                 "language": "sora",
@@ -79,6 +87,7 @@
         ]
     },
     "scripts": {
+        "format:sora": "scripts/formatters.ts",
         "build": "npx tsc",
         "watch": "npx tsc -w",
         "package": "vsce package",
