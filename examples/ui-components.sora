@@ -1,0 +1,4 @@
+Container as card:
+    Text: "Hello" as heading
+    Button as btn_primary:
+        Text: "Click Me"

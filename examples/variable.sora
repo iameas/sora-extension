@@ -1,0 +1,6 @@
+let name be "Joseph"
+
+if name us "Joseph":
+    show("Hello Joseph")
+else:
+    show("Welcome guest")
