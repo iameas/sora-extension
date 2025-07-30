@@ -1,0 +1,59 @@
+{
+  "scopeName": "source.sora",
+  "name": "Sora",
+  "patterns": [
+    {
+      "name": "keyword.control.sora",
+      "match": "\\b(let|be|make|if|else|elseif|is|not|and|or|as|show|print|print -r|modal|input|none)\\b"
+    },
+    {
+      "name": "variable.sora",
+      "match": "\\blet\\s+([a-zA-Z_][a-zA-Z0-9_]*)\\b"
+    },
+    {
+      "name": "string.quoted.double.sora",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.sora",
+          "match": "\\\\."
+        }
+      ]
+    },
+    {
+      "name": "string.quoted.single.sora",
+      "begin": "'",
+      "end": "'",
+      "patterns": [
+        {
+          "name": "constant.character.escape.sora",
+          "match": "\\\\."
+        }
+      ]
+    },
+    {
+      "name": "constant.numeric.sora",
+      "match": "\\b[0-9]+(\\.[0-9]+)?\\b"
+    },
+    {
+      "name": "comment.block.sora",
+      "begin": "##",
+      "end": "##"
+    },
+    {
+      "name": "comment.line.number-sign.sora",
+      "match": "#.*$"
+    },
+    {
+      "name": "entity.name.function.sora",
+      "match": "\\bfunction\\s+[a-zA-Z_][a-zA-Z0-9_]*\\b"
+    },
+    {
+      "name": "entity.name.tag.component.sora",
+      "match": "\\b(Container|Text|Button|Image|Scroll|Input|Stack|List|Modal|ToastAlert|Navigator|Alert|Style|Animate)\\b"
+    }
+  ],
+  "fileTypes": ["sora"],
+  "uuid": "12345678-abcd-ef00-1234-56789abcdef0"
+}

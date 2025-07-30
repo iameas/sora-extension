@@ -1,90 +1,81 @@
 {
-    "Show to Console": {
-      "prefix": "show",
-      "body": ["show('${1:message}')"],
-      "description": "Print a message to the console."
-    },
-    "Print to Console": {
-      "prefix": "print",
-      "body": ["print('${1:message}')"],
-      "description": "Print a message to the console."
-    },
-    "Close": {
-      "prefix": "close",
-      "body": ["close()"],
-      "description": "A close statement ends your code block"
-    },
-    "Error": {
-      "prefix": "error",
-      "body": ["error()"],
-      "description": "This statement shows an error on home UI, if there is any."
-    },
-    "Debug your code": {
-      "prefix": "print -r",
-      "body": ["print -r('${1:message}')"],
-      "description": "Print a message to the debug console. This helps in debugging your codes."
-    },
-    "If Statement": {
-      "prefix": "if",
-      "body": ["if '${1:condition}'"],
-      "description": "Insert an if statement. This writes a condition without an output."
-    },
-    "If-else Statement": {
-      "prefix": "elseif",
-      "body": [
-        "if ${1:condition} {",
-        "  ${2:# Code block for true condition}",
-        "} else {",
-        "  ${3:# Code block for false condition}",
-        "}"
-      ],
-      "description": "Insert an else statement using plain English syntax."
-    },
-    "Variable Declaration 1": {
-      "prefix": "let",
-      "body": ["let ${1:variableName} be (${2:value})"],
-      "description": "Declare a variable in Sora."
-    },
-    "Variable Declaration 2": {
-      "prefix": "var",
-      "body": ["let ${1:variableName} be (${2:value})"],
-      "description": "Declare a variable in Sora."
-    },
-    "Fetch API": {
-      "prefix": "fetch",
-      "body": [
-        "fetch:",
-        "  url: '${1:url}',",
-        "  method: '${2:GET}',",
-        "  headers: {",
-        "    'Authorization': '${3:token}',",
-        "    'Content_type': 'application/json'",
-        "  },",
-        "  body: {",
-        "    '${4:data}'",
-        "  }",
-        "response:",
-        "  show(response.data)"
-      ],
-      "description": "Create a fetch API request using Sora's English-like syntax."
-    },
-    "Navigate to Page": {
-      "prefix": "navigate",
-      "body": ["navigate to ('${1:PageName}')"],
-      "description": "Navigate to another screen"
-    },
-    "Set Value": {
-      "prefix": "set",
-      "body": ["set ${1:variable} to ${2:value}"],
-      "description": "Assign a value to a variable"
-    },
-    "Button Tap": {
-      "prefix": "on tap",
-      "body": [
-        "when ${1:button} is tapped {",
-        "  ${2:-r('Button pressed!')}",
-        "}"
-      ],
-      "description": "Define what happens when a button is tapped"
-    }
+  "Print to Console": {
+    "prefix": "show",
+    "body": ["show(\"$1\")"],
+    "description": "Log output to the console"
+  },
+  "Print to Screen": {
+    "prefix": "print",
+    "body": ["print(\"$1\")"],
+    "description": "Print text to the UI screen"
+  },
+  "Alert (print -r)": {
+    "prefix": "print -r",
+    "body": ["print -r(\"$1\")"],
+    "description": "Alert popup (JS-style alert)"
+  },
+  "Modal": {
+    "prefix": "modal",
+    "body": [
+      "modal(",
+      "  button[$1Cancel, Continue],",
+      "  Text(\"$2Welcome\") desc(\"$3Do you want to continue?\")",
+      ")"
+    ],
+    "description": "Pop-up modal with text and buttons"
+  },
+  "Input": {
+    "prefix": "input",
+    "body": ["input(\"Enter your $1: \")"],
+    "description": "Prompt user for input"
+  },
+  "If Block": {
+    "prefix": "if",
+    "body": [
+      "if ${1:condition}:",
+      "    ${2:print(\"Yes\")}",
+    ],
+    "description": "Conditional block"
+  },
+  "If / Else Block": {
+    "prefix": "ifelse",
+    "body": [
+      "if ${1:condition}:",
+      "    ${2:print(\"Yes\")}",
+      "else:",
+      "    ${5:print(\"No\")}"
+    ],
+    "description": "Conditional block"
+  },
+  "Variable Assignment": {
+    "prefix": "let",
+    "body": ["let ${1:variable} be ${2:value}"],
+    "description": "Define a variable"
+  },
+  "Update Value": {
+    "prefix": "make",
+    "body": ["make ${1:variable} be ${2:new_value}"],
+    "description": "Update an existing variable"
+  },
+  "Container with Components": {
+    "prefix": "Container",
+    "body": [
+      "Container as ${1:wrapper}:",
+      "    Text: \"$2\" as ${3:heading}",
+      "    Button as ${4:btn_primary}:",
+      "        Text: \"$5\""
+    ],
+    "description": "Create a container with child components"
+  },
+  "Style Block": {
+    "prefix": "style",
+    "body": [
+      "style {",
+      "    ${1:class_name} {",
+      "        ${2:property}: ${3:value};",
+      "    }",
+      "}"
+    ],
+    "description": "Add style block"
   }
+}

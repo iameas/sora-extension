@@ -9,25 +9,11 @@
         "email": "thankgodofem219@gmail.com",
         "url": "https://wa.me/2349132765539"
     },
-    "funding": [
-                {
-                    "type": "github",
-                    "url": "https://github.com/sponsors/iameas"
-                },
-                {
-                    "type": "patreon",
-                    "url": "https://www.patreon.com/iameas"
-                },
-                {
-                    "type": "consulting",
-                    "url": "https://wa.me/2349132765539"
-                }
-            ],
     "license": "MIT",
     "repository": {
-        "url": "https://github.com/iameas/sora-vscode-1.0.0.git",
-        "bugs": "https://github.com/iameas/sora-vscode-1.0.0/issues",
-        "homepage": "https://github.com/iameas/sora-vscode-1.0.0.git"
+        "url": "https://github.com/iameas/sora-extension.git",
+        "bugs": "https://github.com/iameas/sora-extension/issues",
+        "homepage": "https://github.com/iameas/sora-extension.git"
     },
     "engines": {
         "vscode": "^1.22.0"
@@ -45,7 +31,8 @@
     "icon": "src/assets/icon.png",
     "activationEvents": [
         "onLanguage:sora",
-        "onCommand:sora.activate",
+        "onCommand:sora.runApp",
+        "onCommand:newFile",
         "onDebug"
     ],
     "main": "./out/extension.js",
@@ -60,7 +47,7 @@
                 "extensions": [
                     ".sora"
                 ],
-                "configuration": "./language-configuration.json",
+                "configuration": "./src/language/configuration.json",
                 "icon": {
                     "light": "./src/assets/icon.png",
                     "dark": "./src/assets/icon.png"
@@ -71,7 +58,7 @@
             {
                 "language": "sora",
                 "scopeName": "source.sora",
-                "path": "./syntaxes/sora.tmLanguage.json"
+                "path": "./src/language/sora.tmLanguage.json"
             }
         ],
         "snippets": [
@@ -81,10 +68,6 @@
             }
         ],
         "commands": [
-            {
-                "command": "sora.activate",
-                "title": "Activate Sora"
-            },
             {
                 "command": "sora.runApp",
                 "title": "Run Sora App"

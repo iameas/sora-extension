@@ -1,0 +1,4 @@
+let name be input("Enter your name: ")
+
+if name is none():
+    show("Please enter your name")
