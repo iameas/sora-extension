@@ -1,0 +1,12 @@
+let a be 20
+let b be 10
+
+let sum be a plus b
+let diff be a minus b
+let prod be a times b
+let quot be a divided by b
+
+show("Sum: " + sum)
+show("Difference: " + diff)
+show("Product: " + prod)
+show("Quotent: " + quot)
