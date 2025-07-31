@@ -1,0 +1,5 @@
+# Debug your code
+print("Hello World")
+
+# Print a code to the console
+show("Hello World")
