@@ -1,6 +1,6 @@
 let name be "Joseph"
 
-if name us "Joseph":
+if name is "Joseph":
     show("Hello Joseph")
 else:
     show("Welcome guest")
