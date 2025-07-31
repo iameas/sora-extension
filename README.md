@@ -1,8 +1,6 @@
 # Sora Language Extension for VS Code
 
-**Sora** is a beginner friendly, english-like programming language desigend for simplicity, readability, and fast UI development. 
-
-This extension brings Sora syntax, highlighting, autocompletion, code snippets, and formating directly into Visual Studio Code.
+**Sora** is a beginner friendly, english-like programming language desigend for simplicity, readability, and fast UI development. This extension brings Sora syntax, highlighting, autocompletion, code snippets, and formating directly into Visual Studio Code.
 
 ---
 
