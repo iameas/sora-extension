@@ -1,5 +1,7 @@
+# Inline styling in Sora
 Container.primary.style("color:#fff;padding:10px")
 
+# Block styling in sora
 style {
     card: {
         padding: 10pcx;
